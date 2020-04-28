@@ -10,26 +10,26 @@ type DataFrame = Dataset[Row]
  
 在 Dataset 上进行 transformations 操作就会生成一个元素为 LogicalPlan 类型的树形结构, 我们来举个例子，假如我有一张学生表，一张分数表，需求是统计所有大于 11 岁的学生的总分。
 
-![1587967040097](C:\Users\10033\AppData\Roaming\Typora\typora-user-images\1587967040097.png)
+![1587967040097](typora-user-images\1587967040097.png)
 
-![img](https://dn-odum9helk.qbox.me/FuuD-SffLPee6Y-iiG-9RLBVLn5y)
+![img](typora-user-images\FuuD-SffLPee6Y-iiG-9RLBVLn5y.png)
 
 这个 queryExecution 就是整个执行计划的执行引擎, 里面有执行过程中，各个中间过程变量，整个执行流程如下
 
-![img](https://dn-odum9helk.qbox.me/FuCF5eIrAVZM83ZMdHahd1sddI28)
+![img](typora-user-images\FuCF5eIrAVZM83ZMdHahd1sddI28.png)
 
 那么我们上面例子中的 sql 语句经过 Parser 解析后就会变成一个抽象语法树，对应解析后的逻辑计划 AST 为 
-￼![img](https://dn-odum9helk.qbox.me/FnJjohYvFSpN0dpO313dKf4ayl61)
+￼![img](typora-user-images\FnJjohYvFSpN0dpO313dKf4ayl61.png)
 
 形象一点用图来表示
  
-￼![img](https://dn-odum9helk.qbox.me/FlUJLnJJrWyVAEtMuXesWrhRxiRq)
+￼![img](typora-user-images\FlUJLnJJrWyVAEtMuXesWrhRxiRq.png)
 
 我们可以看到过滤条件变为了 Filter 节点，这个节点是 UnaryNode 类型， 也就是只有一个孩子，两个表中的数据变为了 UnresolvedRelation 节点，这个节点是 LeafNode 类型， 顾名思义，叶子节点， JOIN 操作就表位了 Join 节点， 这个是一个 BinaryNode 节点，有两个孩子。
  
 上面说的这些节点都是 LogicalPlan 类型的， 可以理解为进行各种操作的 Operator， spark sql 对应各种操作定义了各种 Operator。
  
-![img](https://dn-odum9helk.qbox.me/FvP1pnNfZdp8L2dwZdsfiz7HXYMF)￼
+![img](typora-user-images\FvP1pnNfZdp8L2dwZdsfiz7HXYMF.png)￼
  
 这些 operator 组成的抽象语法树就是整个 Catatyst 优化的基础，Catatyst 优化器会在这个树上面进行各种折腾，把树上面的节点挪来挪去来进行优化。
 

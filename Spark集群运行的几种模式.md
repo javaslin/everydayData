@@ -12,3 +12,8 @@
 
 - on cloud(集群模式)：比如 AWS 的 EC2，使用这个模式能很方便的访问 Amazon的 S3;Spark 支持多种分布式存储系统：HDFS 和 S3。
 
+  
+
+### 资源管理对比图
+
+![1588053801519](typora-user-images\1588053801519.png)
