@@ -16,4 +16,4 @@
 
 ### 资源管理对比图
 
-![1588053801519](typora-user-images\1588053801519.png)
+![1588053801519](https://github.com/javaslin/everydayData/blob/master/typora-user-images/1588053801519.png)
