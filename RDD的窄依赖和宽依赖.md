@@ -2,7 +2,7 @@
 
 ### RDD的宽依赖和窄依赖
 
-![](typora-user-images\1900685-74407830ac62d852.jpg)
+![](https://github.com/javaslin/everydayData/blob/master/typora-user-images/1900685-74407830ac62d852.jpg)
 
 ####  窄依赖
 
