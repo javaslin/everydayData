@@ -2,7 +2,7 @@
 
 ### Yarn执行流程
 
-![img](https://github.com/javaslin/everydayData/blob/master/typora-user-images/v2-d70d9e054e41d50419c5ecda11246196_r.jpg)
+![img](https://raw.githubusercontent.com/javaslin/typoraImg/master/typora202005/03/171550-991703.jpeg)
 
 - 1、用户向YARN提交应用程序，其中包括ApplicationMaster程序、启动ApplicationMaster的命令、用户程序等；
 - 2、ResourceManager为该应用程序分配第一个Container，并与对应的NodeManager通信，要求它在整个Container中启动应用程序的ApplicationMaster；
