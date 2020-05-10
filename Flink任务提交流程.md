@@ -2,7 +2,7 @@
 
 ### Flink任务提交流程
 
-![1589012342938](https://raw.githubusercontent.com/javaslin/typoraImg/master/typora202005/09/162017-711566.png)
+![1589013239283](https://raw.githubusercontent.com/javaslin/typoraImg/master/typora202005/09/163400-450025.png)
 
 #### Flink TaskManager与JobManager的通信
 
